@@ -6,12 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email": "email dev --dir components/emails"
   },
   "dependencies": {
+    "@react-email/components": "0.0.19",
+    "mongoose": "^8.4.1",
+    "next": "14.2.3",
+    "papaparse": "^5.4.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-email": "2.1.4",
+    "resend": "^3.2.0"
   },
   "devDependencies": {
     "eslint": "^8",
