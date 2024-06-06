@@ -2,18 +2,29 @@
 
 import { useState } from "react";
 import { parse } from "papaparse";
+import Contact from "../db/models/Contacts";
 
 export function AddContactPage() {
   const [contacts, setContacts] = useState([
     { firstName: "Peter", lastName: "Pan", email: "test@email.com" },
   ]);
+
+  function handleManualSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    setContacts((existing) => [...existing, data]);
+  }
+
+  function handleSaveContacts() {}
+
   return (
     <div>
       <h1>Import Guest Contacts</h1>
-      <form>
-        <input type="text" placeholder="First Name" />
-        <input type="text" placeholder="Last Name" />
-        <input type="email" placeholder="E-Mail" />
+      <form onSubmit={handleManualSubmit}>
+        <input name="firstName" type="text" placeholder="First Name" />
+        <input name="lastName" type="text" placeholder="Last Name" />
+        <input name="email" type="email" placeholder="E-Mail" />
         <button type="submit">Add guest</button>
       </form>
       <div
@@ -46,6 +57,9 @@ export function AddContactPage() {
           </li>
         ))}
       </ul>
+      <button>
+        save {contacts.length} {contacts.length > 1 ? "contacts" : "contact"}
+      </button>
     </div>
   );
 }
