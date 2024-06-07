@@ -2,13 +2,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { HTMLeditor } from "../../components/HTMLeditor";
-import { AddContactPage } from "../../components/AddContactPage";
+import { AddContactPage } from "../../components/ContactPage/AddContactPage";
+import { NavigationBar } from "../../components/NavigationBar/NavigationBar";
 // import { HTMLeditor } from "../../components/HTMLeditor";
 // import { POST } from "./api/emails/route";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <NavigationBar />
       {/* <button
         className="button"
         onClick={async () => {

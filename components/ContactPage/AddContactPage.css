@@ -1,0 +1,26 @@
+.add-contact-page {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.add-contact-page form {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-contact-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 15rem;
+  margin-right: 0.5rem;
+}
+
+.drag-and-drop {
+  background-color: #fafafa;
+  width: 15rem;
+  align-items: center;
+  padding: 3rem;
+  border: solid 0.2rem gray;
+}

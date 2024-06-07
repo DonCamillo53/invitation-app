@@ -1,13 +1,11 @@
 "use client";
-
+import styles from "./AddContactPage.css";
 import { useState } from "react";
 import { parse } from "papaparse";
-import Contact from "../db/models/Contacts";
+import Contact from "../../db/models/Contacts";
 
 export function AddContactPage() {
-  const [contacts, setContacts] = useState([
-    { firstName: "Peter", lastName: "Pan", email: "test@email.com" },
-  ]);
+  const [contacts, setContacts] = useState([]);
 
   function handleManualSubmit(event) {
     event.preventDefault();
@@ -19,15 +17,18 @@ export function AddContactPage() {
   function handleSaveContacts() {}
 
   return (
-    <div>
-      <h1>Import Guest Contacts</h1>
+    <div className="add-contact-page">
+      <h1>Import Contacts</h1>
       <form onSubmit={handleManualSubmit}>
-        <input name="firstName" type="text" placeholder="First Name" />
-        <input name="lastName" type="text" placeholder="Last Name" />
-        <input name="email" type="email" placeholder="E-Mail" />
-        <button type="submit">Add guest</button>
+        <div className="add-contact-form-inputs">
+          <input name="firstName" type="text" placeholder="First Name" />
+          <input name="lastName" type="text" placeholder="Last Name" />
+          <input name="email" type="email" placeholder="E-Mail" />
+        </div>
+        <button type="submit">Add</button>
       </form>
       <div
+        className="drag-and-drop"
         onDragOver={(e) => {
           e.preventDefault();
         }}
