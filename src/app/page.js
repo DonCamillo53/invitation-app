@@ -2,13 +2,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { HTMLeditor } from "../../components/HTMLeditor";
-import { AddContactPage } from "../../components/AddContactPage";
+import { AddContactPage } from "../../components/ContactPage/AddContact";
+import { NavigationBar } from "../../components/NavigationBar/NavigationBar";
+import { ContactPage } from "../../components/ContactPage/ContactPage";
 // import { HTMLeditor } from "../../components/HTMLeditor";
 // import { POST } from "./api/emails/route";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <NavigationBar />
       {/* <button
         className="button"
         onClick={async () => {
@@ -19,7 +22,7 @@ export default function Home() {
         button
       </button>
       <h1>HELLO</h1> */}
-      <AddContactPage />
+      <ContactPage />
     </main>
   );
 }

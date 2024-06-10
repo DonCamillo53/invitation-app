@@ -1,5 +1,4 @@
 // import mongoose from "mongoose";
-// import "./Contacts";
 
 // const { Schema } = mongoose;
 
