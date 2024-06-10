@@ -1,5 +1,5 @@
 "use client";
-import styles from "./AddContactPage.css";
+import styles from "./AddContact.css";
 import { useState } from "react";
 import { parse } from "papaparse";
 import Contact from "../../db/models/Contacts";
@@ -18,14 +18,24 @@ export function AddContactPage() {
 
   return (
     <div className="add-contact-page">
-      <h1>Import Contacts</h1>
+      <h1>Add New Contacts</h1>
+
       <form onSubmit={handleManualSubmit}>
-        <div className="add-contact-form-inputs">
-          <input name="firstName" type="text" placeholder="First Name" />
-          <input name="lastName" type="text" placeholder="Last Name" />
-          <input name="email" type="email" placeholder="E-Mail" />
+        <div className="form-group">
+          <div className="form-group">
+            <label htmlFor="firstName">First Name</label>
+            <input name="firstName" type="text" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="lastName">Last Name</label>
+            <input name="lastName" type="text" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">E-Mail</label>
+            <input name="email" type="email" />
+          </div>
+          <button type="submit">Add</button>
         </div>
-        <button type="submit">Add</button>
       </form>
       <div
         className="drag-and-drop"

@@ -1,5 +1,7 @@
-import { AddContactPage } from "./AddContactPage";
+import { AddContactPage } from "./AddContact";
 
 export function ContactPage() {
-  return <AddContactPage />;
+  return (<AddContactPage />;
+
+  )
 }

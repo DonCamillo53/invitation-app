@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { HTMLeditor } from "../../components/HTMLeditor";
-import { AddContactPage } from "../../components/ContactPage/AddContactPage";
+import { AddContactPage } from "../../components/ContactPage/AddContact";
 import { NavigationBar } from "../../components/NavigationBar/NavigationBar";
 // import { HTMLeditor } from "../../components/HTMLeditor";
 // import { POST } from "./api/emails/route";

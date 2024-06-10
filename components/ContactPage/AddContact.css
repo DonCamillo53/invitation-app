@@ -1,0 +1,41 @@
+.add-contact-page {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 30%;
+  background: white;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.add-contact-page label {
+  font-size: 14px;
+  position: absolute;
+  top: -10px;
+  margin-left: 10px;
+  background-color: white;
+  padding: 0 5px;
+}
+.add-contact-page form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.add-contact-page input {
+  height: 45px;
+  width: 385px;
+  border: solid 1px #bbbbbb;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.drag-and-drop {
+  background-color: #fafafa;
+  width: 15rem;
+  align-items: center;
+  padding: 3rem;
+  border: solid 0.2rem gray;
+}
