@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { HTMLeditor } from "../../components/HTMLeditor";
 import { AddContactPage } from "../../components/ContactPage/AddContact";
 import { NavigationBar } from "../../components/NavigationBar/NavigationBar";
+import { ContactPage } from "../../components/ContactPage/ContactPage";
 // import { HTMLeditor } from "../../components/HTMLeditor";
 // import { POST } from "./api/emails/route";
 
@@ -21,7 +22,7 @@ export default function Home() {
         button
       </button>
       <h1>HELLO</h1> */}
-      <AddContactPage />
+      <ContactPage />
     </main>
   );
 }
